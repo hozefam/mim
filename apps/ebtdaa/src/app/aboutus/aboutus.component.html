@@ -1,0 +1,117 @@
+<div
+  [ngClass]="current_direction === 'rtl' ? 'rtl' : 'ltr'"
+  [attr.dir]="current_direction"
+>
+  <div id="page-wrap">
+    <section id="white-section">
+      <div class="container-fulid topfixid"></div>
+      <div class="main-container">
+        <div class="container">
+          <!-- Navigation bar -->
+
+          <!-- Title -->
+          <div class="l_body_title">
+            <h1
+              *ngIf="translate.currentLang === 'ar'"
+              style="text-align: right"
+            >
+              {{ 'COMMON.About' | translate }}
+            </h1>
+            <h1 *ngIf="translate.currentLang === 'en'" style="text-align: left">
+              {{ 'COMMON.About' | translate }}
+            </h1>
+          </div>
+
+          <div id="headline__description" style="line-height: 3.6">
+            <p *ngIf="translate.currentLang === 'ar'">
+              يقدم صندوق التنمية الصناعية السعودي للمستثمرين برامج "أرض وقرض
+              صناعي" "أرض وقرض لوجستي" وبرنامج "مصنع وقرض صناعي"، وذلك لتمكين
+              المستثمرين من تقديم طلبٍ للحصول على قرض صناعي/لوجستي، إضافة إلى
+              تخصيص أرض صناعية/لوجستية، أو الحصول على مصنع جاهز، مما يُساعدهم
+              على حفظ الجهد والوقت والمال، من خلال آلية التقديم عبر الطلب
+              المُوحّد، مع الأخذ بعين الاعتبار ضرورة استكمال كافة المتطلبات
+              وشروط الصندوق الصناعي، والجهات الشريكة له.
+
+              <br />
+
+              <span style="font-weight: bold">شركاء برنامج أرض وقرض صناعي</span>
+              <br />
+
+              الهيئة السعودية للمدن الصناعية ومناطق التقنية (مُدن)
+              <br />
+
+              الهيئة الملكية للجبيل وينبع
+              <br />
+
+              هيئة المدن والمناطق الاقتصادية الخاصة ومدينة الملك عبدالله
+              الاقتصادية
+              <br />
+
+              مدينة الملك سلمان للطاقة (سبارك)
+
+              <br />
+              <span style="font-weight: bold">
+                شركاء برنامج مصنع جاهز وقرض</span
+              >
+
+              <br />
+              الهيئة السعودية للمدن الصناعية ومناطق التقنية (مُدن)
+
+              <br />
+
+              <span style="font-weight: bold"
+                >شركاء برنامج أرض وقرض لوجستي:
+              </span>
+              <br />
+              الهيئة السعودية للمدن الصناعية ومناطق التقنية (مُدن)
+              <br />
+              الهيئة الملكية للجبيل وينبع
+              <br />
+              هيئة المدن والمناطق الاقتصادية الخاصة ومدينة الملك عبدالله
+              الاقتصادية
+            </p>
+            <p *ngIf="translate.currentLang === 'en'" style="text-align: left">
+              The Saudi Industrial Development Fund (SIDF) offers “Land and
+              Industrial Loan” “Land and Logistics Loan” and “Factory and Loan”
+              Programs to industrial and logistics investors. These programs
+              allow investors to apply for an industrial/logistics loan and
+              allocate a land, or a ready-built factory through a unified
+              application which will save the investor’s time, effort and money;
+              once all regulations and requirements of SIDF and each of its
+              partner entities are fulfilled
+
+              <br />
+
+              <span style="font-weight: bold">
+                Land and Industrial Loan Partners</span
+              >
+              <br />
+              Saudi Industrial Cities and Technology Zones (Modon)
+              <br />
+              Royal Authority of Jubail and Yanbu (RCJY)
+              <br />
+              Economic Cities and Special Zones Authority and King Abdullah
+              Economic City
+              <br />
+              King Salman Energy Park (SPARK)
+              <br />
+
+              <span style="font-weight: bold">Factory and Loan Partners </span>
+              <br />
+              Saudi Industrial Cities and Technology Zones (Modon)
+              <br />
+              Land and Logistics Loan Partners:
+              <br />
+              Saudi Industrial Cities and Technology Zones (Modon)
+              <br />
+              Royal Authority of Jubail and Yanbu (RCJY)
+              <br />
+              Economic Cities and Special Zones Authority and King Abdullah
+              Economic City
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'DroidKufi-bold';
+  src: url('../../assets/fonts/DroidKufi-Bold.ttf') format('truetype'),
+    url('../../assets/fonts/DroidArabicKufi-Bold.woff') format('woff'),
+    url('../../assets/fonts/DroidArabicKufi-Bold.otf') format('opentype'),
+    url('../../assets/fonts/DroidKufi-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DroidKufi';
+  src: url('../../assets/fonts/DroidKufi-Regular.ttf') format('truetype'),
+    url('../../assets/fonts/DroidArabicKufi.woff') format('woff'),
+    url('../../assets/fonts/DroidArabicKufi.otf') format('opentype'),
+    url('../../assets/fonts/DroidKufi-Regular.woff2') format('woff2');
+}
+
+@import '../../assets/styles/aos.css';
+@import '../../assets/styles/svganimation.css';
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../../assets/fonts/IcoMoon-Free.ttf') format('truetype');
+}
+
+.rtl {
+  @import '../../assets/styles/styles.scss';
+}
+
+.ltr {
+  @import '../../assets/styles/styles-ltr.scss';
+}
+
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  margin-bottom: 0;
+}
+.footer__socialIcon {
+  display: block;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  color: #00000085 !important;
+}
+.footer__socials li {
+  padding-right: 0;
+  padding-left: 8px;
+  list-style-type: none;
+}
+
+.scrollable-container {
+  height: 90vh !important;
+}
+.main-container-fixed {
+  position: relative !important;
+}
+a.nav-link {
+  line-height: 30px !important;
+}
+.breada {
+  color: #413157 !important;
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.nb-theme-default nb-layout .layout nb-layout-header nav {
+  color: cornsilk;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1003;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.spinner div:first-child {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  box-shadow: 0 3px 3px 0 #c1a240;
+  transform: translate3d(0, 0, 0);
+  animation: spin 2s linear infinite;
+}
+
+.spinner div:first-child:after,
+.spinner div:first-child:before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.spinner div:first-child:before {
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  box-shadow: 0 3px 3px 0 #0e977f;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+.spinner div:first-child:after {
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  box-shadow: 0 3px 3px 0 #c1a240;
+  animation: spin 1.5s linear infinite;
+}
+
+.logo-kl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1004;
+}
+
+.footer__socials[_ngcontent-c1] li[_ngcontent-c1] {
+  padding-right: 0;
+  padding-left: 8px;
+  list-style-type: none;
+}
+.footer__socials[_ngcontent-c1] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  margin-bottom: 0;
+}
+.footer__socialIcon[_ngcontent-c1] {
+  display: block;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  color: #00000085 !important;
+}
+
+.sharing {
+  display: none !important;
+}

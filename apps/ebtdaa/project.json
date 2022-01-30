@@ -15,7 +15,11 @@
         "tsConfig": "apps/ebtdaa/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/ebtdaa/src/favicon.ico", "apps/ebtdaa/src/assets"],
-        "styles": ["apps/ebtdaa/src/styles.scss"],
+        "styles": [
+          "node_modules/bootstrap/scss/bootstrap.scss",
+          "apps/ebtdaa/src/styles.scss",
+          "node_modules/socicon/css/socicon.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -23,13 +27,13 @@
           "budgets": [
             {
               "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumWarning": "5mb",
+              "maximumError": "10mb"
             },
             {
               "type": "anyComponentStyle",
-              "maximumWarning": "2kb",
-              "maximumError": "4kb"
+              "maximumWarning": "5mb",
+              "maximumError": "10mb"
             }
           ],
           "fileReplacements": [
