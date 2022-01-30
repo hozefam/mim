@@ -1,0 +1,91 @@
+{
+  "projectType": "application",
+  "root": "apps/ebtdaa",
+  "sourceRoot": "apps/ebtdaa/src",
+  "prefix": "mim",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/ebtdaa",
+        "index": "apps/ebtdaa/src/index.html",
+        "main": "apps/ebtdaa/src/main.ts",
+        "polyfills": "apps/ebtdaa/src/polyfills.ts",
+        "tsConfig": "apps/ebtdaa/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/ebtdaa/src/favicon.ico", "apps/ebtdaa/src/assets"],
+        "styles": ["apps/ebtdaa/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/ebtdaa/src/environments/environment.ts",
+              "with": "apps/ebtdaa/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "ebtdaa:build:production"
+        },
+        "development": {
+          "browserTarget": "ebtdaa:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "ebtdaa:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/ebtdaa/src/**/*.ts",
+          "apps/ebtdaa/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/ebtdaa"],
+      "options": {
+        "jestConfig": "apps/ebtdaa/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

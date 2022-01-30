@@ -1,0 +1,28 @@
+{
+  "root": "apps/ebtdaa-e2e",
+  "sourceRoot": "apps/ebtdaa-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ebtdaa-e2e/cypress.json",
+        "devServerTarget": "ebtdaa:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "ebtdaa:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ebtdaa-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ebtdaa"]
+}

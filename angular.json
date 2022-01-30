@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "ebtdaa": "apps/ebtdaa",
+    "ebtdaa-e2e": "apps/ebtdaa-e2e"
+  }
+}
