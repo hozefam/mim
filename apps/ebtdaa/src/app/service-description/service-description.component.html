@@ -1,4 +1,4 @@
-<div class="mb-5 mt-3 h-100">
+<div class="mb-5 mt-3 h-100" [ngClass]="current_direction === 'rtl' ? 'rtl' : 'ltr'">
   <div
     *ngIf="translate.currentLang === 'ar'"
     class="rtl"

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 import { ActivatedRoute } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'mim-service-description',
@@ -10,6 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class ServiceDescriptionComponent implements OnInit {
   serviceId = '7';
+  current_direction = 'rtl';
 
   constructor(
     public translate: TranslateService,
@@ -19,5 +20,9 @@ export class ServiceDescriptionComponent implements OnInit {
   ngOnInit(): void {
     let id = this.router.snapshot.paramMap.get('id');
     if (id) this.serviceId = id;
+
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.current_direction = event.lang === 'en' ? 'ltr' : 'rtl';
+    });
   }
 }

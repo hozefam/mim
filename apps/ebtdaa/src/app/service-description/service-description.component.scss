@@ -11,3 +11,11 @@ div {
   text-align: left !important;
   direction: ltr !important;
 }
+
+.rtl {
+  @import '../../assets/styles/styles.scss';
+}
+
+.ltr {
+  @import '../../assets/styles/styles-ltr.scss';
+}
